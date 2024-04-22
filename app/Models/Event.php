@@ -9,6 +9,10 @@ class Event extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'code', 'title', 'desc', 'location', 'price', 'photo',
+    ];
+
     public function agendas()
     {
         return $this->hasMany(Agenda::class);
