@@ -3,6 +3,7 @@
 use App\Http\Controllers\PositionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\AgendaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,13 @@ Route::get('/events/{event}', [EventController::class, 'show'])->name('events.sh
 Route::get('/events/{event}/edit', [EventController::class, 'edit'])->name('events.edit');
 Route::put('/events/{event}', [EventController::class, 'update'])->name('events.update');
 Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('events.destroy');
+
+
+Route::get('/agendas', [AgendaController::class, 'index'])->name('agendas.index');
+Route::get('/agendas/create', [AgendaController::class, 'create'])->name('agendas.create');
+Route::post('/agendas', [AgendaController::class, 'store'])->name('agendas.store');
+Route::get('/agendas/{agenda}', [AgendaController::class, 'show'])->name('agendas.show');
+Route::get('/agendas/{agenda}/edit', [AgendaController::class, 'edit'])->name('agendas.edit');
+Route::put('/agendas/{agenda}', [AgendaController::class, 'update'])->name('agendas.update');
+Route::delete('/agendas/{agenda}', [AgendaController::class, 'destroy'])->name('agendas.destroy');
 
