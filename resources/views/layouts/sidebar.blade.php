@@ -24,6 +24,12 @@
                     <i class="fas fa-fw fa-user-alt"></i>
                     <span>Position</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('events.index') }}">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Event</span>
+                </a>
+            <li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">

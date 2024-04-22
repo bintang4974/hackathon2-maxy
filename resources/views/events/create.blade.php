@@ -5,15 +5,6 @@
 @endsection
 
 @section('content')
-  
-@endsection
-
-@section('js')
-  
-@endsection
-
-
-@section('content')
     <h1>Tambah Event Baru</h1>
 
     <form action="{{ route('events.store') }}" method="POST" enctype="multipart/form-data">
@@ -44,5 +35,9 @@
         </div>
         <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
-@endsection
-
+    @endsection
+    
+    @section('js')
+      
+    @endsection
+    
