@@ -1,5 +1,18 @@
 @extends('layouts.app')
 
+@section('css')
+
+@endsection
+
+@section('content')
+  
+@endsection
+
+@section('js')
+  
+@endsection
+
+
 @section('content')
     <h1>Tambah Event Baru</h1>
 
@@ -32,3 +45,4 @@
         <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
 @endsection
+
