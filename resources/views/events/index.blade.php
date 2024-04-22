@@ -34,6 +34,7 @@
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus event ini?')">Hapus</button>
                                     </form>
+                                    <a href="{{ route('agendas.create', ['event_id' => $event->id]) }}" class="btn btn-primary">Tambah Agenda Baru</a>
                                 </td>
                             </tr>
                         @endforeach
