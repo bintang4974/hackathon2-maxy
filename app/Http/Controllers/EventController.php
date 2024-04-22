@@ -25,7 +25,7 @@ class EventController extends Controller
             'title' => 'required',
             'desc' => 'required',
             'location' => 'required',
-            'price' => 'required|number',
+            'price' => 'required|numeric',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -61,25 +61,39 @@ class EventController extends Controller
             'title' => 'required',
             'desc' => 'required',
             'location' => 'required',
-            'price' => 'required|number',
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'price' => 'required|numeric',
+            'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-        $event->update($request->all());
+
+        $imageName = $event->photo;
 
         if ($request->hasFile('photo')) {
             $imageName = time() . '.' . $request->photo->extension();
             $request->photo->move(public_path('images'), $imageName);
-            $event->photo = $imageName;
-            $event->save();
         }
+
+        $event->update([
+            'code' => $request->code,
+            'title' => $request->title,
+            'desc' => $request->desc,
+            'location' => $request->location,
+            'price' => $request->price,
+            'photo' => $imageName,
+        ]);
 
         return redirect()->route('events.index')->with('success', 'Event berhasil diperbarui.');
     }
 
     public function destroy(Event $event)
     {
+        $photoPath = public_path('images/' . $event->photo);
+        if (file_exists($photoPath)) {
+            unlink($photoPath);
+        }
+
         $event->delete();
 
         return redirect()->route('events.index')->with('success', 'Event berhasil dihapus.');
     }
+
 }
