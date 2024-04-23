@@ -4,6 +4,7 @@ use App\Http\Controllers\PositionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AgendaController;
+use App\Http\Controllers\SpeakerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ Route::get('/', function () {
 
 
 Route::resource('position', PositionController::class);
+Route::resource('speaker', SpeakerController::class);
 
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
 Route::get('/events/create', [EventController::class, 'create'])->name('events.create');
