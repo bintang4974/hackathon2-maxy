@@ -4,104 +4,95 @@ namespace App\Http\Controllers;
 
 use App\Models\Position;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PositionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        $position = Position::all();
-
-        return view('position.index', [
-            // 'pageTitle' => $pageTitle,
-            'position' => $position
-        ]);
+        $positions = Position::all();
+ 
+        return view('position.index', compact('positions'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('position.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
+        // dd($request->all());
+        // Validasi input
         $request->validate([
             'code' => 'required',
             'name' => 'required',
-            // 'desc' => 'required',
-            // 'location' => 'required',
-            // 'price' => 'required|numeric',
-            // 'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'speaker_id' => 'required',
         ]);
 
-        // $imageName = time() . '.' . $request->photo->extension();
-        // $request->photo->move(public_path('images'), $imageName);
+        // Mulai transaksi database
+        DB::beginTransaction();
 
-        Position::create([
-            'code' => $request->code,
-            'name' => $request->name,
-            // 'desc' => $request->desc,
-            // 'location' => $request->location,
-            // 'price' => $request->price,
-            // 'photo' => $imageName,
-        ]);
+        try {
+            // Simpan data ke dalam tabel positions menggunakan model Position
+            $position = new Position();
+            $position->code = $request->code;
+            $position->name = $request->name;
+            $position->speaker_id = $request->speaker_id;
+            $position->save();
 
-        return redirect()->route('position.index')->with('success', 'Event berhasil dibuat.');
+            // Commit transaksi
+            DB::commit();
+
+            // Redirect dengan pesan sukses
+            return redirect()->route('speakers.show', ['speaker' => $request->speaker_id])->with('success', 'Position berhasil ditambahkan.');
+        } catch (\Exception $e) {
+            // Rollback transaksi jika terjadi kesalahan
+            DB::rollback();
+ 
+            // Redirect dengan pesan kesalahan
+            return redirect()->back()->with('error', 'Gagal menambahkan position. Silakan coba lagi.');
+        }
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+
+
+
+    public function show(Position $position)
     {
-        $position = Position::find($id);
-
-        return view('position.show', compact('position'));
+        return view('position.show', compact('positions'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
-        $position = Position::find($id);
-
+        $position = Position::all();
         return view('position.edit', compact('position'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Position $position)
     {
         $request->validate([
             'code' => 'required',
             'name' => 'required',
+            'speaker_id' => 'required',
         ]);
 
-        $position = Position::find($id);
-        $position->code = $request->code;
-        $position->name = $request->name;
-        $position->save();
-
-        return redirect()->route('position.index')->with('success', 'Event berhasil diperbarui.');
+        try {
+            $position->update($request->all());
+            return redirect()->route('speakers.index', ['speaker' => $request->speaker_id])->with('success', 'Position berhasil diperbaharui.');
+        } catch (\Exception $e) {
+            return redirect()->route('speakers.index', ['speaker' => $request->speaker_id])->with('error', 'Gagal memperbaharui position. Silakan coba lagi.');
+        }
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        Position::find($id)->delete();
-
-        return redirect()->route('position.index');
-    }
+    public function destroy(Position $position)
+        {
+            try {
+                $speakerID = $position->event_id; 
+                $position->delete();
+                return redirect()->route('speakers.index', ['speaker' => $speakerID])->with('success', 'Position berhasil dihapus.');
+            } catch (\Exception $e) {
+                return redirect()->route('speakers.index', ['speaker' => $speakerID])->with('error', 'Gagal menghapus position. Silakan coba lagi.');
+            }
+        }
 }
+

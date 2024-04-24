@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('code');
             $table->string('title');
             $table->text('desc');
+            $table->date('date');
             $table->string('location');
             $table->string('price');
             $table->string('photo');

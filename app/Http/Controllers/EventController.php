@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
-
+use Illuminate\Support\Facades\Session;
+ 
 class EventController extends Controller
-{
+{ 
     public function index()
     {
         $events = Event::all();
@@ -24,6 +25,7 @@ class EventController extends Controller
             'code' => 'required',
             'title' => 'required',
             'desc' => 'required',
+            'date' => 'required',
             'location' => 'required',
             'price' => 'required|numeric',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -36,12 +38,17 @@ class EventController extends Controller
             'code' => $request->code,
             'title' => $request->title,
             'desc' => $request->desc,
+            'date' => $request->date,
             'location' => $request->location,
             'price' => $request->price,
             'photo' => $imageName,
         ]);
 
-        return redirect()->route('events.index')->with('success', 'Event berhasil dibuat.');
+        if ($event) {
+            return redirect()->route('events.index')->with('success', 'Event berhasil dibuat.');
+        } else {
+            return redirect()->back()->with('error', 'Gagal membuat event. Silakan coba lagi.');
+        }
     }
 
     public function show(Event $event)
@@ -60,6 +67,7 @@ class EventController extends Controller
             'code' => 'required',
             'title' => 'required',
             'desc' => 'required',
+            'date' => 'required',
             'location' => 'required',
             'price' => 'required|numeric',
             'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -76,24 +84,35 @@ class EventController extends Controller
             'code' => $request->code,
             'title' => $request->title,
             'desc' => $request->desc,
+            'date' => $request->desc,
             'location' => $request->location,
             'price' => $request->price,
             'photo' => $imageName,
         ]);
 
-        return redirect()->route('events.index')->with('success', 'Event berhasil diperbarui.');
+        if ($event) {
+            return redirect()->route('events.index')->with('success', 'Event berhasil diperbarui.');
+        } else {
+            return redirect()->back()->with('error', 'Gagal memperbarui event. Silakan coba lagi.');
+        }
     }
 
     public function destroy(Event $event)
-    {
+    { 
+        if ($event->agendas()->exists()) {
+            return redirect()->route('events.index')->with('error', 'Maaf, event ini tidak dapat dihapus karena sudah memiliki agenda terkait.');
+        }
+
         $photoPath = public_path('images/' . $event->photo);
         if (file_exists($photoPath)) {
             unlink($photoPath);
         }
 
-        $event->delete();
-
-        return redirect()->route('events.index')->with('success', 'Event berhasil dihapus.');
+        if ($event->delete()) {
+            return redirect()->route('events.index')->with('success', 'Event berhasil dihapus.');
+        } else {
+            return redirect()->route('events.index')->with('error', 'Gagal menghapus event. Silakan coba lagi.');
+        }
     }
 
 }

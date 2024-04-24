@@ -10,11 +10,17 @@ class Event extends Model
     use HasFactory;
 
     protected $fillable = [
-        'code', 'title', 'desc', 'location', 'price', 'photo',
+        'code', 'title', 'desc', 'location', 'price', 'photo', 'date',
     ];
 
     public function agendas()
     {
         return $this->hasMany(Agenda::class);
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
+
 }

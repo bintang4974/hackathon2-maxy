@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('content')
     <h1>Edit position</h1>
@@ -14,6 +14,6 @@
             <label>Name:</label>
             <input type="text" name="name" id="name" class="form-control" value="{{ $position->name }}" required>
         </div>
-        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+        <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
 @endsection

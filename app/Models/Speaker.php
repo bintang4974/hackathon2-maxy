@@ -8,11 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Speaker extends Model
 {
     use HasFactory;
+    protected $fillable = ['code', 'name', 'sosmed', 'photo'];
 
     protected $guarded = [];
 
     public function positions()
     {
         return $this->hasMany(Position::class);
+    }
+    public function speaker()
+    {
+        return $this->belongsTo(Speaker::class);
     }
 }
