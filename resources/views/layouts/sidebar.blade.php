@@ -21,11 +21,45 @@
                     <i class="fas fa-fw fa-user-alt"></i>
                     <span>Speaker</span></a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('speaker.index') }}">
+                    <i class="fas fa-fw fa-user-alt"></i>
+                    <span>Speaker</span></a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('events.index') }}">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Event</span>
                 </a>
             <li>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Addons
+                </div>
+
+
+                <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span></a>
+            </li>
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+
         </ul>
         <!-- End of Sidebar -->
