@@ -6,17 +6,26 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\SpeakerController;
+
 use App\Http\Controllers\EventRegistrationController;
 use App\Http\Controllers\EventUserController;
 use App\Http\Controllers\FrontController;
+
 
 
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
 Route::get('/events/{id}', [FrontController::class, 'showevent'])->name('event.detail');
 Route::get('/user/dashboard', [FrontController::class, 'userdashboard'])->name('user.dashboard');
 
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('position', PositionController::class);
+
 
     Route::get('/events', [EventController::class, 'index'])->name('events.index');
     Route::get('/events/create', [EventController::class, 'create'])->name('events.create');
@@ -25,6 +34,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/events/{event}/edit', [EventController::class, 'edit'])->name('events.edit');
     Route::put('/events/{event}', [EventController::class, 'update'])->name('events.update');
     Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('events.destroy');
+
+Route::resource('position', PositionController::class);
+Route::resource('speaker', SpeakerController::class);
+
 
     Route::get('/events/register/{eventId}', [EventRegistrationController::class, 'register'])->name('events.register');
 
