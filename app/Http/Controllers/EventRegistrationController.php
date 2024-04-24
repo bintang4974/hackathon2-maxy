@@ -19,7 +19,7 @@ class EventRegistrationController extends Controller
 
         // Jika user sudah terdaftar pada event ini, kembalikan dengan pesan error
         if ($existingRegistration) {
-            return redirect()->route('events.index')->with('error', 'Anda sudah terdaftar pada event ini.');
+            return redirect()->route('event.detail', $eventId)->with('error', 'Anda sudah terdaftar pada event ini.');
         }
 
         // Jika tidak, buat entri baru di tabel EventUser
@@ -29,9 +29,7 @@ class EventRegistrationController extends Controller
         $eventUser->is_paid = false;
         $eventUser->save();
 
-        return redirect()->route('events.index')->with('success', 'Anda berhasil mendaftar pada event. Silahkan lakukan pembayaran sesuai harga yang tertera pada informasi event. ke nomor Rekening BCA 1234567890. Lakukan konfirmasi pembayaran melalui pesan whatsapp ke nomor 081234567890. Terimakasih.');
+        // Redirect ke halaman detail event dengan menyertakan ID acara sebagai parameter
+        return redirect()->route('event.detail', $eventId)->with('success', 'Anda berhasil mendaftar pada event. Silahkan lakukan pembayaran sesuai harga yang tertera pada informasi event. ke nomor Rekening BCA 1234567890. Lakukan konfirmasi pembayaran melalui pesan whatsapp ke nomor 081234567890. Terimakasih.');
     }
-
-
-
 }

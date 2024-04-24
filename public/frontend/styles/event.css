@@ -1,0 +1,1432 @@
+.frame-child {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .frame-item {
+    align-self: stretch;
+    height: 40.7px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+  .rectangle-wrapper {
+    width: 153px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-3xs);
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .about-us,
+  .event,
+  .home,
+  .impact-trips {
+    position: relative;
+    line-height: 120%;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 54px;
+    z-index: 1;
+  }
+  .about-us,
+  .event,
+  .impact-trips {
+    min-width: 50px;
+    white-space: nowrap;
+  }
+  .about-us,
+  .impact-trips {
+    min-width: 83px;
+  }
+  .impact-trips {
+    min-width: 112px;
+  }
+  .home-about-us-impact-trips {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--gap-xl);
+  }
+  .home-about-us-impact-trips-wrapper,
+  .rectangle-parent {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .home-about-us-impact-trips-wrapper {
+    width: 449px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 18px 0 0;
+  }
+  .rectangle-parent {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--padding-xl) 141px 19.3px 130px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    gap: var(--gap-xl);
+    text-align: left;
+    font-size: var(--body-b1-size);
+    color: var(--foundation-black-b900);
+    font-family: var(--body-b4);
+  }
+  .last-events {
+    position: relative;
+    line-height: 29px;
+    display: inline-block;
+    min-width: 125px;
+  }
+  .last-events-wrapper {
+    width: 349px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs) var(--padding-xl);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .frame-inner {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .transformational-sales-confere {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .transformational-sales-confere-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .the-transformational-sales {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    white-space: pre-wrap;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .the-transformational-sales-con-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    font-size: var(--body-b3-size);
+  }
+  .frame-div {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-group {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .button10:hover,
+  .button11:hover,
+  .button1:hover,
+  .button2:hover,
+  .button3:hover,
+  .button4:hover,
+  .button5:hover,
+  .button6:hover,
+  .button7:hover,
+  .button8:hover,
+  .button9:hover,
+  .button:hover {
+    background-color: var(--color-olive);
+  }
+  .rectangle-group {
+    width: 372px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .rectangle-icon {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .transformational-sales-confere1 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .transformational-sales-confere-container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .the-transformational-sales1 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    white-space: pre-wrap;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .the-transformational-sales-con-container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    font-size: var(--body-b3-size);
+  }
+  .frame-child1 {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference1 {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button1 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .rectangle-container {
+    width: 372px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .frame-child2 {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .transformational-sales-confere2 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .transformational-sales-confere-frame {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .the-transformational-sales2 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    white-space: pre-wrap;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .the-transformational-sales-con-frame {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    font-size: var(--body-b3-size);
+  }
+  .frame-child3 {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-parent1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference2 {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button2 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .rectangle-parent1 {
+    width: 372px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .frame-child4 {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .tbn-asia-conference {
+    position: relative;
+    line-height: 29px;
+  }
+  .tbn-asia-conference-2023-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+  }
+  .this-narrative-follows {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .this-narrative-follows-the-liv-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-shrink: 0;
+    font-size: var(--body-b3-size);
+  }
+  .frame-child5 {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-parent2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference3 {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button3 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .rectangle-parent2 {
+    width: 372px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .frame-child6 {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .tbn-asia-conference1 {
+    position: relative;
+    line-height: 29px;
+  }
+  .tbn-asia-conference-2023-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+  }
+  .this-narrative-follows1 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .this-narrative-follows-the-liv-container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-shrink: 0;
+    font-size: var(--body-b3-size);
+  }
+  .frame-child7 {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-parent3 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference4 {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button4 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .rectangle-parent3 {
+    width: 372px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .frame-child8 {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .tbn-asia-conference2 {
+    position: relative;
+    line-height: 29px;
+  }
+  .tbn-asia-conference-2023-frame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+  }
+  .this-narrative-follows2 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .this-narrative-follows-the-liv-frame {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-shrink: 0;
+    font-size: var(--body-b3-size);
+  }
+  .frame-child9 {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-parent4 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference5 {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button5 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .rectangle-parent4 {
+    width: 372px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .frame-child10 {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .tbn-asia-conference3 {
+    position: relative;
+    line-height: 29px;
+  }
+  .tbn-asia-conference-2023-wrapper1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+  }
+  .this-narrative-follows3 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .this-narrative-follows-the-liv-wrapper1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-shrink: 0;
+    font-size: var(--body-b3-size);
+  }
+  .frame-child11 {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-parent5 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference6 {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button6 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .rectangle-parent5 {
+    width: 372px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .frame-child12 {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .tbn-asia-conference4 {
+    position: relative;
+    line-height: 29px;
+  }
+  .tbn-asia-conference-2023-wrapper2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+  }
+  .this-narrative-follows4 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .this-narrative-follows-the-liv-wrapper2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-shrink: 0;
+    font-size: var(--body-b3-size);
+  }
+  .frame-child13 {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-parent6 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference7 {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button7 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .rectangle-parent6 {
+    width: 372px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .frame-child14 {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .tbn-asia-conference5 {
+    position: relative;
+    line-height: 29px;
+  }
+  .tbn-asia-conference-2023-wrapper3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+  }
+  .this-narrative-follows5 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .this-narrative-follows-the-liv-wrapper3 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-shrink: 0;
+    font-size: var(--body-b3-size);
+  }
+  .frame-child15 {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-parent7 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference8 {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button8 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .rectangle-parent7 {
+    width: 372px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .frame-child16 {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .transformational-sales-confere3 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .transformational-sales-confere-wrapper1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .the-transformational-sales3 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    white-space: pre-wrap;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .the-transformational-sales-con-wrapper1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    font-size: var(--body-b3-size);
+  }
+  .frame-child17 {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-parent8 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference9 {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button9 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .rectangle-parent8 {
+    width: 373px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .frame-child18 {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .transformational-sales-confere4 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .transformational-sales-confere-wrapper2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .the-transformational-sales4 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    white-space: pre-wrap;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .the-transformational-sales-con-wrapper2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    font-size: var(--body-b3-size);
+  }
+  .frame-child19 {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-parent9 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference10 {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button10 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .rectangle-parent9 {
+    width: 373px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .frame-child20 {
+    align-self: stretch;
+    height: 419px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .transformational-sales-confere5 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .transformational-sales-confere-wrapper3 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs-9);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .the-transformational-sales5 {
+    flex: 1;
+    position: relative;
+    line-height: 120%;
+    white-space: pre-wrap;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .the-transformational-sales-con-wrapper3 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    font-size: var(--body-b3-size);
+  }
+  .frame-child21 {
+    width: 113px;
+    height: 17.9px;
+  }
+  .frame-parent10 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .see-conference11 {
+    position: relative;
+    font-size: var(--header-h6-size);
+    line-height: 120%;
+    display: inline-block;
+    font-family: var(--body-b4);
+    color: var(--foundation-black-b10);
+    text-align: left;
+    min-width: 115px;
+  }
+  .button11 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs) var(--padding-xl);
+    background-color: var(--foundation-green-g900);
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .rectangle-parent10 {
+    width: 373px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs-8);
+  }
+  .frame-parent,
+  .upcoming-event {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .frame-parent {
+    width: 1440px;
+    overflow-x: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 112px;
+    box-sizing: border-box;
+    min-height: 2527px;
+    gap: var(--gap-xl);
+  }
+  .upcoming-event {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--gap-31xl);
+    flex-shrink: 0;
+    text-align: left;
+    font-size: var(--header-h4-size);
+    color: var(--foundation-black-b900);
+    font-family: var(--body-b4);
+  }
+  .shapes-icon {
+    width: 137.3px;
+    height: 42px;
+    position: relative;
+    object-fit: contain;
+  }
+  .lippo-thamrin-lt {
+    flex: 1;
+    position: relative;
+    line-height: 17px;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .address-label {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .jl-m-h {
+    flex: 1;
+    position: relative;
+    line-height: 17px;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .address-label1,
+  .shapes {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .shapes {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+    text-align: center;
+  }
+  .biinstagram-icon {
+    height: 16px;
+    width: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .mingcutemail-fill-icon,
+  .mingcuteyoutube-fill-icon,
+  .rilinkedin-fill-icon {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 24px;
+  }
+  .social-media-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 var(--padding-xl);
+    gap: 27px;
+  }
+  .about-us1 {
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    min-width: 57px;
+  }
+  .about-us-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 64.2px 0 64.1px;
+  }
+  .events {
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    min-width: 44px;
+  }
+  .events-wrapper {
+    border-left: 1px solid var(--foundation-black-b10);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--padding-51xl);
+  }
+  .impact-trips1 {
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    min-width: 79px;
+  }
+  .impact-trips-wrapper {
+    border-left: 1px solid var(--foundation-black-b10);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 53px;
+    z-index: 1;
+  }
+  .reserve-now {
+    position: relative;
+    line-height: 120%;
+    display: inline-block;
+    min-width: 81px;
+  }
+  .frame-parent11,
+  .reserve-now-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .reserve-now-wrapper {
+    border-left: 1px solid var(--foundation-black-b10);
+    justify-content: center;
+    padding: 0 52px;
+  }
+  .frame-parent11 {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 var(--padding-xl);
+    box-sizing: border-box;
+    max-width: 100%;
+    row-gap: 20px;
+    font-size: var(--body-b4-size);
+  }
+  .copyright-2023- {
+    position: relative;
+    line-height: 17px;
+  }
+  .copyright-2023-transformatio-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .shapes-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 31px;
+    max-width: 100%;
+  }
+  .shape-jlmhthamrinmentengjakart-inner {
+    align-self: stretch;
+    background-color: #091f40;
+    overflow: hidden;
+    padding: 50px 0;
+    max-width: 100%;
+  }
+  .last-event,
+  .shape-jlmhthamrinmentengjakart,
+  .shape-jlmhthamrinmentengjakart-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .shape-jlmhthamrinmentengjakart {
+    align-self: stretch;
+    padding: 100px 0 0;
+    max-width: 100%;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: var(--body-b3-size);
+    color: var(--foundation-black-b10);
+    font-family: var(--body-b4);
+  }
+  .last-event {
+    width: 100%;
+    height: 3278px;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0 0 501.7px;
+    gap: var(--gap-31xl);
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  @media screen and (max-width: 1200px) {
+    .frame-parent {
+      padding-left: var(--padding-37xl);
+      padding-right: var(--padding-37xl);
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .home-about-us-impact-trips {
+      display: none;
+    }
+    .home-about-us-impact-trips-wrapper {
+      width: 0;
+    }
+    .frame-parent,
+    .rectangle-parent {
+      padding-left: var(--padding-46xl);
+      padding-right: var(--padding-51xl);
+      box-sizing: border-box;
+    }
+    .frame-parent {
+      padding-left: var(--padding-9xl);
+      padding-right: var(--padding-9xl);
+    }
+    .upcoming-event {
+      gap: var(--gap-6xl);
+    }
+    .shapes-parent {
+      gap: 15px;
+    }
+    .shape-jlmhthamrinmentengjakart {
+      padding-top: var(--padding-46xl);
+      box-sizing: border-box;
+    }
+    .last-event {
+      height: auto;
+      gap: var(--gap-6xl);
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .rectangle-parent {
+      padding-left: var(--padding-xl);
+      padding-right: var(--padding-xl);
+      box-sizing: border-box;
+    }
+    .last-events,
+    .tbn-asia-conference,
+    .tbn-asia-conference1,
+    .tbn-asia-conference2,
+    .tbn-asia-conference3,
+    .tbn-asia-conference4,
+    .tbn-asia-conference5,
+    .transformational-sales-confere,
+    .transformational-sales-confere1,
+    .transformational-sales-confere2,
+    .transformational-sales-confere3,
+    .transformational-sales-confere4,
+    .transformational-sales-confere5 {
+      font-size: var(--font-size-lgi);
+      line-height: 23px;
+    }
+    .shape-jlmhthamrinmentengjakart-inner {
+      padding-top: var(--padding-13xl);
+      padding-bottom: var(--padding-13xl);
+      box-sizing: border-box;
+    }
+  }
+  
