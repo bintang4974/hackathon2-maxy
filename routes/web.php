@@ -9,12 +9,19 @@ use App\Http\Controllers\SpeakerController;
 
 use App\Http\Controllers\EventRegistrationController;
 use App\Http\Controllers\EventUserController;
+use App\Http\Controllers\FrontController;
 
+
+
+Route::get('/', [FrontController::class, 'index'])->name('front.index');
+Route::get('/events/{id}', [FrontController::class, 'showevent'])->name('event.detail');
+Route::get('/user/dashboard', [FrontController::class, 'userdashboard'])->name('user.dashboard');
 
 
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('position', PositionController::class);
