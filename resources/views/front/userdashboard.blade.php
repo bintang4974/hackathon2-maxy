@@ -13,6 +13,7 @@
                 <th>Event Title</th>
                 <th>Date</th>
                 <th>Location</th>
+                <th>Payment Status</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -24,6 +25,13 @@
                     <td>{{ $eventUser->event->title }}</td>
                     <td>{{ $eventUser->event->date }}</td>
                     <td>{{ $eventUser->event->location }}</td>
+                    <td>
+                        @if($eventUser->is_paid)
+                            Sudah Bayar
+                        @else
+                            Belum Bayar
+                        @endif
+                    </td>
                     <td>
                         {{-- Add action buttons here --}}
                         <a href="{{ route('events.show', $eventUser->event->id) }}" class="btn btn-primary">View Event</a>
