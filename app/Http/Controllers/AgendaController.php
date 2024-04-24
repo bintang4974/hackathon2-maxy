@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Agenda;
+use Illuminate\Support\Facades\DB;
 
 class AgendaController extends Controller
 {
     public function index()
     {
-        $agendas = Agenda::all();
+        $agendas = Agenda::all(); 
         return view('agendas.index', compact('agendas'));
     }
 
@@ -23,16 +24,39 @@ class AgendaController extends Controller
         $request->validate([
             'code' => 'required',
             'title' => 'required',
-            'time' => 'required',
+            'time_start' => 'required',
+            'time_end' => 'required',
             'desc' => 'required',
             'event_id' => 'required',
-            'speaker_id' => 'required',
         ]);
 
-        Agenda::create($request->all());
+        // Gabungkan waktu mulai dan waktu selesai menjadi satu rentang waktu
+        $timeRange = $request->time_start . ' - ' . $request->time_end;
 
-        return redirect()->route('agendas.index')->with('success', 'Agenda berhasil ditambahkan.');
+        // Gunakan transaksi untuk memastikan integritas data
+        DB::beginTransaction();
+
+        try {
+            // Simpan rentang waktu ke basis data
+            Agenda::create([
+                'code' => $request->code,
+                'title' => $request->title,
+                'time' => $timeRange,
+                'desc' => $request->desc,
+                'event_id' => $request->event_id,
+                'speaker_id' => $request->speaker_id,
+            ]);
+
+            DB::commit();
+
+            return redirect()->route('events.show', ['event' => $request->event_id])->with('success', 'Agenda berhasil ditambahkan.');
+        } catch (\Exception $e) {
+            DB::rollback();
+
+            return redirect()->back()->with('error', 'Gagal menambahkan agenda. Silakan coba lagi.');
+        }
     }
+
 
     public function show(Agenda $agenda)
     {
@@ -52,18 +76,25 @@ class AgendaController extends Controller
             'time' => 'required',
             'desc' => 'required',
             'event_id' => 'required',
-            'speaker_id' => 'required',
         ]);
 
-        $agenda->update($request->all());
-
-        return redirect()->route('agendas.index')->with('success', 'Agenda berhasil diperbarui.');
+        try {
+            $agenda->update($request->all());
+            return redirect()->route('events.show', ['event' => $request->event_id])->with('success', 'Agenda berhasil diperbaharui.');
+        } catch (\Exception $e) {
+            return redirect()->route('events.show', ['event' => $request->event_id])->with('error', 'Gagal memperbaharui agenda. Silakan coba lagi.');
+        } 
     }
 
     public function destroy(Agenda $agenda)
     {
-        $agenda->delete();
-
-        return redirect()->route('agendas.index')->with('success', 'Agenda berhasil dihapus.');
+        try {
+            $eventId = $agenda->event_id; 
+            $agenda->delete();
+            return redirect()->route('events.show', ['event' => $eventId])->with('success', 'Agenda berhasil dihapus.');
+        } catch (\Exception $e) {
+            return redirect()->route('events.show', ['event' => $eventId])->with('error', 'Gagal menghapus agenda. Silakan coba lagi.');
+        }
     }
+
 }

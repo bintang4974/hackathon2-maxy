@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('content')
     <h3>Daftar Position</h3>
 
     @if (count($position) > 0)
-
+ 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">

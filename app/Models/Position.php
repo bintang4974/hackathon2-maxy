@@ -10,7 +10,7 @@ class Position extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function speakers()
+    public function speaker()
     {
         return $this->belongsTo(Speaker::class);
     }

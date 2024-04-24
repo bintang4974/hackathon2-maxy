@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('time');
             $table->text('desc');
             $table->foreignId('event_id')->constrained();
-            $table->foreignId('speaker_id')->constrained();
+            $table->foreignId('speaker_id')->constrained()->nullable();
             $table->timestamps();
         });
     }

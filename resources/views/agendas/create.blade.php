@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('content')
     <h1>Tambah Agenda Baru</h1>
@@ -15,8 +15,12 @@
             <input type="text" name="title" id="title" class="form-control" required>
         </div>
         <div class="form-group">
-            <label for="time">Time:</label>
-            <input type="text" name="time" id="time" class="form-control" required>
+            <label for="time_start">Start Time:</label>
+            <input type="time" name="time_start" id="time_start" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="time_end">End Time:</label>
+            <input type="time" name="time_end" id="time_end" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="desc">Description:</label>
@@ -24,7 +28,8 @@
         </div>
         <div class="form-group">
             <label for="speaker_id">Speaker:</label>
-            <select name="speaker_id" id="speaker_id" class="form-control" required>
+            <select name="speaker_id" id="speaker_id" class="form-control">
+                <option value="">Pilih Speaker</option>
                 @foreach(\App\Models\Speaker::pluck('name', 'id') as $speakerId => $speakerName)
                     <option value="{{ $speakerId }}">{{ $speakerName }}</option>
                 @endforeach

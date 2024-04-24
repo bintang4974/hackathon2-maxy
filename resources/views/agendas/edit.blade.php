@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('content')
     <h1>Edit Agenda</h1>
@@ -28,8 +28,8 @@
         </div>
         <div class="form-group">
             <label for="speaker_id">Speaker ID:</label>
-            <input type="text" name="speaker_id" id="speaker_id" class="form-control" value="{{ $agenda->speaker_id }}" required>
+            <input type="text" name="speaker_id" id="speaker_id" class="form-control" value="{{ $agenda->speaker_id }}">
         </div>
-        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+        <button type="submit" class="btn btn-primary btn-sm">Simpan Perubahan</button>
     </form>
 @endsection
